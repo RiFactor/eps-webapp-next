@@ -27,13 +27,16 @@ export default function RootLayout({
 }) {
   // >
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth!">
       <body
-      // className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className="flex min-h-screen" // add  bg-white or other colour here?
+        // className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <div className="flex flex-col ">
           <NavBar />
-          <main className="flex items-stretch min-h-screen">{children}</main>
+          <main role="main" className="grow">
+            {children}
+          </main>
           <Footer />
         </div>
       </body>
