@@ -36,7 +36,7 @@ export default function RootLayout({
           <NavBar />
           {/* add padding */}
           {/* create nested layout for pages */}
-          <main role="main" className="grow">
+          <main role="main" className="grow p-5">
             {children}
           </main>
           <Footer />
