@@ -1,5 +1,3 @@
-const page = () => {
-  return <div>About</div>;
-};
-
-export default page;
+export default function AboutPage() {
+  return <div>About Page</div>;
+}
