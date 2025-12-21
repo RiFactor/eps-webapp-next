@@ -34,6 +34,8 @@ export default function RootLayout({
       >
         <div className="flex flex-col ">
           <NavBar />
+          {/* add padding */}
+          {/* create nested layout for pages */}
           <main role="main" className="grow">
             {children}
           </main>
