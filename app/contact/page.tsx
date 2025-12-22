@@ -6,9 +6,9 @@ const contactDetails = [
     detail: "email@mail.com",
     href: "mailto:email@mail.com",
   },
-  { id: 1, type: "Phone", detail: "1234567", href: "tel: 1234567" },
-  { id: 1, type: "Social media", detail: "_handle", href: "https://www..." },
-  { id: 1, type: "", detail: "", href: "" },
+  { id: 2, type: "Phone", detail: "1234567", href: "tel: 1234567" },
+  { id: 3, type: "Social media", detail: "_handle", href: "https://www..." },
+  { id: 4, type: "", detail: "", href: "" },
 ];
 export default function ContactPage() {
   return (
