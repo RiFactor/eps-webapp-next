@@ -1,5 +1,21 @@
 @import "tailwindcss";
 
+@theme {
+  /* --colour[name-name]: [#000000] */
+  /* --color-dark-green: #344c3d; */
+}
+
+@layer base {
+    h1 {
+    /* @apply text-3xl */
+  }
+  div { 
+    /* not sure why 'div' */
+/* @apply text-[colour-name-above] */
+  /* @apply text-dark-green */
+  }
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
