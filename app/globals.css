@@ -14,6 +14,14 @@
 /* @apply text-[colour-name-above] */
   /* @apply text-dark-green */
   }
+  ul {
+    @apply list-disc;
+    @apply pl-5
+  }
+    ol {
+    @apply list-decimal;
+    @apply pl-5
+  }
 }
 
 :root {
