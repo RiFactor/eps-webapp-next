@@ -2,46 +2,8 @@
 import { useState } from "react";
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
-
-const photoGallery = [
-  {
-    id: 1,
-    src: "assets/images/cat.jpg",
-    alt: "cat",
-    quote: "",
-  },
-  {
-    id: 2,
-    src: "assets/images/dog.jpg",
-    alt: "dog",
-    quote: "",
-  },
-  {
-    id: 3,
-    src: "assets/images/dog2.jpg",
-    alt: "dog",
-    quote: "",
-  },
-  {
-    id: 4,
-    src: "assets/images/koala.jpg",
-    alt: "koala",
-    quote: "",
-  },
-  //   {
-  //     id: 5,
-  //     src: "assets/images/photo5.jpg",
-  //     alt: "",
-  //     quote: ""
-  //   },
-  //   {
-  //     id: 6,
-  //     src: "assets/images/photo6.jpg",
-  //     alt: "",
-  //     quote: "",
-  //   },
-];
-// END OF COPY
+import { photoGallery } from "./images";
+import CarouselImage from "./image";
 
 export default function ImageCarousel() {
   const [imageIndex, setImageIndex] = useState({
@@ -85,42 +47,9 @@ export default function ImageCarousel() {
   return (
     <div className="flex flex-col h-9/10 w-full bg-green-300 carousel">
       <div className="flex flex-row">
-        <div
-          key={photoGallery[imageIndex.prev].id}
-          // or add 'card' in classname style
-          // fix height / size?! h-96 is ok
-          className="flex flex-col items-center rounded justify-center bg-blue-200 carousel-image"
-        >
-          <img
-            src={photoGallery[imageIndex.prev].src}
-            alt={photoGallery[imageIndex.prev].alt}
-            // look at responsive cropping photo...
-            className="flex h-80 items-center bg-red-200 p-5 transition ease-in-out delay-300 motion-reduce:transition-none"
-            // w-20 h-20
-            // fixed md:top-0 md:right-0
-          ></img>
-          <p className="flex p-5 rounded card">
-            {photoGallery[imageIndex.prev].alt}
-          </p>
-        </div>
-        <div
-          key={photoGallery[imageIndex.current].id}
-          // or add 'card' in classname style
-          // fix height / size?! h-96 is ok
-          className="flex flex-col items-center rounded justify-center bg-blue-200 carousel-image"
-        >
-          <img
-            src={photoGallery[imageIndex.current].src}
-            alt={photoGallery[imageIndex.current].alt}
-            // look at responsive cropping photo...
-            className="flex h-80 items-center bg-red-200 p-5 transition ease-in-out delay-300 motion-reduce:transition-none"
-            // w-20 h-20
-            // fixed md:top-0 md:right-0
-          ></img>
-          <p className="flex p-5 rounded card">
-            {photoGallery[imageIndex.current].alt}
-          </p>
-        </div>
+        <CarouselImage index={imageIndex.prev} />
+        <CarouselImage index={imageIndex.current} />
+        {/* <CarouselImage index={imageIndex.next} /> */}
       </div>
       {/* fixed bottom-0 */}
       <div className="flex flex-row gap-5 bg-amber-400 mb-20 justify-between w-full">
