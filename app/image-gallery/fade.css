@@ -1,0 +1,10 @@
+.fadedClass {
+  /* transform: translateX(-100%); */
+  transition: transform 3.5s ease-in-out;
+}
+
+
+.visibleClass {
+  /* transform: translateX(-100%); */
+  transition: transform 3.5s ease-in-out;
+}
