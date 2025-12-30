@@ -48,22 +48,16 @@ export default function ImageCarousel() {
   };
   return (
     // <div className="flex flex-col h-9/10 w-full bg-green-300 carousel">
-    <div className="flex flex-col">
-      <div className="flex flex-row items-center justify-center relative w-80% m-auto overflow-hidden">
-        <div className="flex w-1/3">
-          <CarouselImage index={imageIndex.prev} />
-        </div>
-        <div className="flex w-1/3">
-          <CarouselImage index={imageIndex.current} status="current" />
-        </div>
+    <div className="flex flex-col gap-5 pt-5 bg-amber-200">
+      <div className="flex flex-row">
+        <CarouselImage index={imageIndex.prev} />
+        <CarouselImage index={imageIndex.current} status="current" />
         {/* update w/ next */}
-        <div className="flex w-1/3 items-center justify-center">
-          <CarouselImage index={imageIndex.next} />
-        </div>
+        <CarouselImage index={imageIndex.next} />
         {/* <CarouselImage index={imageIndex.next} /> */}
       </div>
       {/* fixed bottom-0 */}
-      <div className="flex flex-row gap-5 bg-amber-400 mb-20 justify-between w-full">
+      <div className="flex flex-row justify-between">
         {/* make it bigger */}
         <button
           onClick={() => {
