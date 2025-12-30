@@ -17,9 +17,9 @@ export default function NavItem({ href, label, id = "navbar_item" }: IProps) {
       href={href}
       // key={linkKey}
       // add this colour to styles instead of hardcoding
-      className={`${
-        isActive ? "bg-[#f9eee3]" : ""
-      } rounded-full p-2 hover:bg-amber-900 hover:text-white`}
+      className={`text-brand-blue ${
+        isActive ? "bg-brand-blue text-brand-white" : ""
+      } rounded-full p-2 hover:bg-brand-navy hover:text-white`}
       id={id}
     >
       {label}

@@ -7,6 +7,8 @@ const NavBarItems: TNavBarItems[] = [
   // TODO update items here
   { title: "Home", url: "/" },
   { title: "About", url: "/about" },
+  { title: "Services", url: "/services" },
+  { title: "Blog", url: "/blog" },
   { title: "Contact", url: "/contact" },
 ];
 

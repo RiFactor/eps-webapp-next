@@ -8,7 +8,8 @@ export default function AboutPage() {
 
   return (
     <div className="flex flex-col gap-5 p-10">
-      <h1>About</h1>
+      {/* pics of them?  */}
+      <h1>About Us</h1>
       <div>
         <article className="">
           <img

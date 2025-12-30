@@ -1,12 +1,16 @@
 @import "tailwindcss";
 
 @theme {
+  --color-brand-blue: #2596be;
+  --color-brand-white: #ffffff;
+  --color-brand-navy: #2a2345;
   /* --colour[name-name]: [#000000] */
   /* --color-dark-green: #344c3d; */
 }
 
 @layer base {
     h1 {
+      @apply text-brand-blue;
     /* @apply text-3xl */
   }
   div { 

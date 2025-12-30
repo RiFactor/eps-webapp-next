@@ -9,7 +9,7 @@ export default function NavBar() {
   return (
     // remove bg pink
     // add bg colour/style when selected
-    <nav className="flex flex-col md:flex-row w-screen sticky top-0 p-3 shadow z-50 items-center md:justify-between place-content-between bg-pink-300">
+    <nav className="flex flex-col md:flex-row w-screen sticky top-0 p-3 shadow-xl z-50 items-center md:justify-between place-content-between bg-brand-white">
       {/* visible */}
       <div className="flex items-center justify-between w-full md:w-fit px-4">
         <Link href="/" className="flex items-center justify-between gap-2">
@@ -17,7 +17,7 @@ export default function NavBar() {
           {/* individual link component */}
           <img
             alt="logo"
-            className="flex justify-self-center w-20"
+            className="flex justify-self-center h-20"
             src="/assets/logo.webp" // TODO add logo to public > assets
           ></img>
         </Link>

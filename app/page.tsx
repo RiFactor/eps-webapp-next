@@ -6,10 +6,9 @@ export default function HomePage() {
   return (
     <>
       <main>
-        <h1 className="flex justify-center">template page</h1>
-
-        <ImageCarousel />
-        <Fade />
+        <h1 className="flex justify-center text-brand-white bg-brand-blue">
+          External Pressure Solutions
+        </h1>
       </main>
     </>
   );
