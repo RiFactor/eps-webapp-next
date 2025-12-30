@@ -15,12 +15,6 @@ export default function ImageCarousel() {
   console.log(imageIndex, "page load");
 
   const handlePrevImage = () => {
-    // console.log(photoGallery.length); // e.g. length 6 but index 5
-    console.log(imageIndex);
-    // but if it is end of list then start again? and check length?? so minus -1
-    // setImageIndex(imageIndex == photoGallery.length - 1 ? 0 : imageIndex - 1);
-    console.log(imageIndex, "old");
-    // PREVIOUS SO MINUS 1
     const newIndex = { ...imageIndex };
     newIndex.current =
       imageIndex.current == 0
@@ -33,22 +27,39 @@ export default function ImageCarousel() {
     newIndex.next =
       imageIndex.next == 0 ? photoGallery.length - 1 : imageIndex.next - 1;
     setImageIndex({ ...newIndex });
+  };
 
-    // newIndex.current =
-    //   imageIndex.current == 0
-    //     ? photoGallery.length - 1
-    //     : imageIndex.current - 1;
-    // setImageIndex({ ...newIndex });
+  const handleNextImage = () => {
+    console.log(imageIndex, "old");
+    const newIndex = { ...imageIndex };
+    newIndex.current =
+      imageIndex.current == photoGallery.length - 1
+        ? 0
+        : imageIndex.current + 1;
+
+    newIndex.prev =
+      imageIndex.prev == photoGallery.length - 1 ? 0 : imageIndex.prev + 1;
+
+    newIndex.next =
+      imageIndex.next == photoGallery.length - 1 ? 0 : imageIndex.next + 1;
+    setImageIndex({ ...newIndex });
+
     console.log(imageIndex, "new");
   };
-  const handleNextImage = () => {
-    console.log("next");
-  };
   return (
-    <div className="flex flex-col h-9/10 w-full bg-green-300 carousel">
-      <div className="flex flex-row">
-        <CarouselImage index={imageIndex.prev} />
-        <CarouselImage index={imageIndex.current} />
+    // <div className="flex flex-col h-9/10 w-full bg-green-300 carousel">
+    <div className="flex flex-col">
+      <div className="flex flex-row items-center justify-center relative w-80% m-auto overflow-hidden">
+        <div className="flex w-1/3">
+          <CarouselImage index={imageIndex.prev} />
+        </div>
+        <div className="flex w-1/3">
+          <CarouselImage index={imageIndex.current} status="current" />
+        </div>
+        {/* update w/ next */}
+        <div className="flex w-1/3 items-center justify-center">
+          <CarouselImage index={imageIndex.next} />
+        </div>
         {/* <CarouselImage index={imageIndex.next} /> */}
       </div>
       {/* fixed bottom-0 */}
