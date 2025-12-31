@@ -17,6 +17,9 @@
     @apply text-2xl
   }
 
+  button {
+    @apply cursor-pointer
+  }
   div { 
     /* not sure why 'div' */
 /* @apply text-[colour-name-above] */
