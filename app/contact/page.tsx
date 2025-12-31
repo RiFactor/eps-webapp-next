@@ -1,15 +1,5 @@
-const contactDetails = [
-  // include image / icon
-  {
-    id: 1,
-    type: "Email",
-    detail: "email@mail.com",
-    href: "mailto:email@mail.com",
-  },
-  { id: 2, type: "Phone", detail: "1234567", href: "tel: 1234567" },
-  { id: 3, type: "Social media", detail: "_handle", href: "https://www..." },
-  { id: 4, type: "", detail: "", href: "" },
-];
+import { contactDetails } from "./Contact";
+
 export default function ContactPage() {
   return (
     <div className="flex flex-col gap-5">

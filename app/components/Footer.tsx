@@ -1,3 +1,5 @@
+import { contactDetails } from "../contact/Contact";
+
 export default function Footer() {
   return (
     <footer className="flex w-screen bg-brand-navy flex-row md:flex-col px-10 text-brand-white gap-5 divide-brand-white divide-y-2">
@@ -14,8 +16,26 @@ export default function Footer() {
       <div className="grid md:grid-cols-2 py-5">
         <div className="flex flex-col gap-2">
           <p className="">Contact Us</p>
-          <p className="font-bold">01202 287672</p>
-          <p className="font-bold">jamie@externalpressuresolutions.co.uk</p>
+          {contactDetails.map((contact) => {
+            return (
+              <div
+                key={contact.id}
+                className="flex group rounded"
+                id="contact-card"
+              >
+                <a
+                  href={contact.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div className="flex group-hover:text-brand-blue">
+                    <p className="flex font-bold">{contact.type}:&nbsp;</p>
+                    <p className="flex">{contact.detail}</p>
+                  </div>
+                </a>
+              </div>
+            );
+          })}
           <p className="">Bournemouth, UK</p>
         </div>
         {/* <div>
