@@ -9,10 +9,14 @@
 }
 
 @layer base {
-    h1 {
+  h1 {
       @apply text-brand-blue;
-    /* @apply text-3xl */
+    @apply text-4xl
   }
+  h2 {
+    @apply text-2xl
+  }
+
   div { 
     /* not sure why 'div' */
 /* @apply text-[colour-name-above] */
